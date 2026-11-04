@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f7"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Pocket Tools">
+<title>Pocket Tools</title><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon-192.png"><link rel="stylesheet" href="./styles.css">
+</head><body><div class="app">
+<header><div><p class="eyebrow">BỘ CÔNG CỤ CÁ NHÂN</p><h1>Pocket Tools</h1></div><span class="brand">✦</span></header>
+<section class="hero"><p class="eyebrow">XIN CHÀO</p><h2>Mọi thứ cần thiết,<br>ở cùng một nơi.</h2><p class="muted">Một bộ công cụ nhỏ gọn cho mỗi ngày.</p></section>
+<nav class="tabs"><button class="tab active" data-tab="calc">Máy tính</button><button class="tab" data-tab="convert">Chuyển đổi</button><button class="tab" data-tab="timer">Đếm giờ</button><button class="tab" data-tab="notes">Ghi chú</button></nav>
+<section class="panel active" id="calc"><div class="heading"><div><p class="eyebrow">TÍNH TOÁN</p><h2>Máy tính</h2></div><b>＋</b></div>
+<div class="card"><div class="display"><small id="expr">Sẵn sàng</small><output id="result">0</output></div><div class="keys">
+<button data-key="AC" class="util">AC</button><button data-key="DEL" class="util">⌫</button><button data-key="%" class="util">%</button><button data-key="÷" class="op">÷</button>
+<button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button data-key="×" class="op">×</button>
+<button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button><button data-key="−" class="op">−</button>
+<button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button data-key="+" class="op">+</button>
+<button data-key="0" class="zero">0</button><button data-key=".">.</button><button data-key="=" class="equal">=</button></div></div></section>
+<section class="panel" id="convert"><div class="heading"><div><p class="eyebrow">ĐƠN VỊ</p><h2>Chuyển đổi</h2></div><b>⇄</b></div><div class="card form">
+<label>Loại chuyển đổi<select id="kind"><option value="length">Độ dài</option><option value="weight">Khối lượng</option><option value="temperature">Nhiệt độ</option><option value="data">Dung lượng dữ liệu</option></select></label>
+<div class="twocol"><label>Giá trị<input id="amount" type="number" value="1" inputmode="decimal"></label><label>Từ<select id="from"></select></label></div>
+<label>Đổi sang<select id="to"></select></label><div class="answer"><small>KẾT QUẢ</small><output id="converted">1000 m</output></div></div></section>
+<section class="panel" id="timer"><div class="heading"><div><p class="eyebrow">TẬP TRUNG</p><h2>Đếm giờ</h2></div><b>◷</b></div><div class="card form center"><p class="eyebrow">HẸN GIỜ ĐẾM NGƯỢC</p><div class="twocol timer-input"><label>PHÚT<input id="mins" type="number" min="0" max="999" value="5"></label><label>GIÂY<input id="secs" type="number" min="0" max="59" value="0"></label></div><output id="clock">05:00</output><div class="actions"><button id="start" class="primary">Bắt đầu</button><button id="reset" class="secondary">Đặt lại</button></div><p id="timer-status" class="muted">Sẵn sàng khi bạn cần.</p></div></section>
+<section class="panel" id="notes"><div class="heading"><div><p class="eyebrow">GHI NHANH</p><h2>Ghi chú</h2></div><b>✎</b></div><div class="card form"><label>Ghi chú của bạn<textarea id="note" rows="6" placeholder="Viết điều cần nhớ..."></textarea></label><div class="actions"><small class="muted">Lưu trên thiết bị này</small><button id="save" class="primary">Lưu ghi chú</button></div><p id="note-status" class="muted">Ghi chú chỉ lưu trong trình duyệt trên thiết bị này.</p></div></section>
+<footer><span>Pocket Tools</span><span>Được tạo để dùng mỗi ngày</span></footer></div><script src="./app.js"></script></body></html>
